@@ -1,0 +1,14 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #0d6efd;
+  }
+  
+  button {
+    width: 100%;
+  }
+  

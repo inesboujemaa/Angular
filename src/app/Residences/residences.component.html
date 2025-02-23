@@ -1,0 +1,25 @@
+<h2>Liste des Résidences</h2>
+
+<!-- Barre de recherche -->
+<!--input type="text" [(ngModel)]="searchText" placeholder="Rechercher par adresse..." -->
+
+<!-- Conteneur en grille -->
+<div class="residences-container">
+  <div *ngFor="let residence of listResidences" class="card">
+    <img [src]="residence.image" alt="{{ residence.name }}" />
+    <h3>{{ residence.name }}</h3>
+
+    <!-- Affichage du statut avec couleur -->
+    <p [ngClass]="{'disponible': residence.status === 'Disponible', 
+                   'construction': residence.status === 'En Construction',
+                   'vendu': residence.status === 'Vendu'}">
+      {{ residence.status }}
+    </p>
+
+    <!-- Bouton "Show Location" -->
+    <button (click)="showAddress(residence)">📍 Show Location</button>
+
+    <!-- Bouton "Like" -->
+    <button (click)="addToFavorites(residence)">❤️ Like</button>
+  </div>
+</div>

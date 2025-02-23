@@ -1,0 +1,7 @@
+footer a:hover {
+    color: #f8c146; /* Couleur jaune clair au survol */
+  }
+  footer {
+    border-top: 2px solid #f8c146; /* Ligne jaune en haut du footer */
+  }
+  
